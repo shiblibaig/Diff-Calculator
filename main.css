@@ -1,0 +1,38 @@
+.mainh1{
+    font-size: xx-large;
+    font-variant: historical-forms;
+}
+.maind1{
+    margin-top: 150px;
+
+}
+#mainb1{
+    font-size: x-large;
+    text-decoration: dotted;
+}
+#mainb2{
+    font-size: x-large;
+    text-decoration: dashed;
+    margin-top: 200px;
+
+}
+.top3{
+    margin-right: 180px;
+}
+.mid3{
+    margin-left: 90px;
+    margin-right: 100px;
+    margin-top: -157px;
+}
+.bot3{
+    margin-left: 175px;
+    margin-right: 10px;
+    margin-top: -157px;
+
+}
+.mp1{
+    margin-top: 150px;
+}
+.mp2{
+    margin-top: 80px;
+}
