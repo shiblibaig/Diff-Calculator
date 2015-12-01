@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel = stylesheet href = animate.css>
+    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+    <script>
+        var y=0;
+        var j=0;
+        var k=0;
+        function load1(){
+            a1 = document.getElementById("n1").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load2(){
+            a1 = document.getElementById("n2").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load3(){
+            a1 = document.getElementById("n3").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load4(){
+            a1 = document.getElementById("n4").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load5(){
+            a1 = document.getElementById("n5").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load6(){
+            a1 = document.getElementById("n6").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load7(){
+            a1 = document.getElementById("n7").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load8(){
+            a1 = document.getElementById("n8").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load9(){
+            a1 = document.getElementById("n9").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function load0(){
+            a1 = document.getElementById("n0").value;
+            y = Number(y*10)+ Number(a1);
+            document.getElementById("A").innerHTML = y;
+        }
+        function change(){
+            var f = document.getElementById("val1").value;
+            if(f=="Get first Value"){
+                document.getElementById("val1").value = "Get second Value";
+                document.getElementById("number1").value = y;
+                j=y;
+                y=0;
+            }
+            else if(f=="Get second Value"){
+                document.getElementById("number2").value = y;
+            }
+        }
+        function change1() {
+            document.getElementById("val1").value = "+";
+            k = j + y;
+            document.getElementById("res").value = k;
+            }
+        function change2() {
+                document.getElementById("val1").value = "-";
+                var h =  k = j - y;
+            document.getElementById("res").value = h;
+            }
+
+        function change3() {
+                document.getElementById("val1").value = "X";
+            var h =k = j * y;
+            document.getElementById("res").value = h;
+            }
+
+        function change4() {
+                document.getElementById("val1").value = "/";
+            var h =k = j / y;
+            document.getElementById("res").value = h;
+            }
+
+        function change5() {
+                document.getElementById("val1").value = "^";
+            var h =Math.pow(j, y);
+            document.getElementById("res").value = h;
+            }
+
+        function change6() {
+                document.getElementById("val1").value = "_/";
+            var h =Math.pow(y, (1 / j));
+            document.getElementById("res").value = h;
+            }
+    </script>
+</head>
+<body>
+<h1 align="center">Play with the Calculator</h1>
+<h4 align="center">First choose a number, then choose the second number and after that you choose the operation.</h4>
+<!--<div><p id = "A"></p></div>-->
+<div align="center" class = "mp1"><a href="#mynums" data-rel="popup" >Enter Numbers</a></div>
+<div align="center" class="animated bounceInRight" data-rel="" id = "mynums">
+    <h3 id = "enum">Enter a number</h3>
+    <div class="top3">
+        <input id = "n1" name = "k" type="button" value="1" onclick="load1();">
+        <input id = "n4" name = "k" type="button" value="4" onclick="load4();">
+        <input id = "n7" name = "k" type="button" value="7" onclick="load7();">
+    </div>
+    <div class="mid3">
+        <input id = "n2" name = "k" type="button" value="2" onclick="load2();">
+        <input id = "n5" name = "k" type="button" value="5" onclick="load5();">
+        <input id = "n8" name = "k" type="button" value="8" onclick="load8();">
+    </div>
+    <div class="bot3">
+        <input id = "n3" name = "k" type="button" value="3" onclick="load3();">
+        <input id = "n6" name = "k" type="button" value="6" onclick="load6();">
+        <input id = "n9" name = "k" type="button"  value="9" onclick="load9();">
+    </div>
+    <input id = "n0" type="button" name = "k" value="0" onclick="load0();">
+</div>
+<input align="center" id = "val1" type="button" value = "Get first Value" onclick="change()"/>
+<div align="left" id = "num1"><input id = "number1" type="number"/></div>
+<div  id = "num2" align="right"><input id = "number2" type="number"/></div>
+<br>
+<input type="text" id = "res" value="Result Will Come here"/>
+<div align="center" class = "mp2"><a href="#myops" data-rel="popup" >Choose Operation</a></div>
+
+<div align="center" class="animated bounceInLeft" id = "myops">
+    <h3 id = "cop">Choose Operation</h3>
+    <div class="top31">
+        <input type="submit" value="   Addition   " onclick="change1();"/>
+        <input type="submit" value=" Subtraction  " onclick="change2();"/>
+        <input type="submit" value="Multiplication" onclick="change3();"/>
+    </div>
+    <div class="mid32">
+        <input type="submit" value="   Division   " onclick="change4();"/>
+        <input type="submit" value="A to Power B " onclick="change5();"/>
+        <input type="submit" value="Ath root of B" onclick="change6();"/>
+    </div>
+</div>
+</body>
+</html>

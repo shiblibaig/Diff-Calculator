@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel = stylesheet href = animate.css>
+    <link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Calculator</title>
+    <script>
+        var y=0;
+        function load1(){
+            a1 = Number(document.getElementById("n1").value);
+            y = y*10+ a1;
+        }
+        function load2(){
+            a1 = Number(document.getElementById("n2").value);
+            y = y*10+ a1;
+        }
+        function load3(){
+            a1 = Number(document.getElementById("n3").value);
+            y = y*10+ a1;
+        }
+        function load4(){
+            a1 = Number(document.getElementById("n4").value);
+            y = y*10+ a1;
+        }
+        function load5(){
+            a1 = Number(document.getElementById("n5").value);
+            y = y*10+ a1;
+        }
+        function load6(){
+            a1 = Number(document.getElementById("n6").value);
+            y = y*10+ a1;
+        }
+        function load7(){
+            a1 = Number(document.getElementById("n7").value);
+            y = y*10+ a1;
+        }
+        function load8(){
+            a1 = Number(document.getElementById("n8").value);
+            y = y*10+ a1;
+        }
+        function load9(){
+            a1 = Number(document.getElementById("n9").value);
+            y = y*10+ a1;
+        }
+        function load0(){
+            a1 = Number(document.getElementById("n0").value);
+            y = y*10+ a1;
+        }
+        document.getElementById("add").value = Number(y);
+        /*Number(document.getElementById("A").innerHTML = a1;
+        $.post("calculations.php", {data:y}, function(results){
+            // the output of the response is now handled via a variable call 'results'
+            alert(results);
+        });*/
+
+    </script>
+</head>
+<body>
+<div><p id = "A">h</p></div>
+<div>
+    <div data-role="header">
+        <h1>Play with the Calculator!</h1>
+    </div>
+    <div data-role="main" class = "ui-content">
+        <div align="center" class = "mp1"><a href="#mynums" data-rel="popup" >Enter Numbers</a>
+        </div>
+        <div align="center" class = "mp2"><a href="#myops" data-rel="popup" >Choose Operation</a>
+        </div>
+        <div align="center" data-role="popup" id="mynums" class="ui-content" style=" min-width:250px;">
+            <form name = "form1" method="post" action="calculations.php">
+                <h3>Enter first digit!</h3>
+                <h5>Only positive numbers.</h5>
+                <h6>The box with 000 is for Entering values.</h6>
+                <div class="top3">
+                    <input id = "n1" name = "k" type="button" value="1" onclick="load1();">
+                    <input id = "n4" name = "k" type="button" value="4" onclick="load4();">
+                    <input id = "n7" name = "k" type="button" value="7" onclick="load7();">
+                </div>
+                <div class="mid3">
+                    <input id = "n2" name = "k" type="button" value="2" onclick="load2();">
+                    <input id = "n5" name = "k" type="button" value="5" onclick="load5();">
+                    <input id = "n8" name = "k" type="button" value="8" onclick="load8();">
+                </div>
+                <div class="bot3">
+                    <input id = "n3" name = "k" type="button" value="3" onclick="load3();">
+                    <input id = "n6" name = "k" type="button" value="6" onclick="load6();">
+                    <input id = "n9" name = "k" type="button"  value="9" onclick="load9();">
+                </div>
+                <input id = "n0" type="button" name = "k" value="0" onclick="load0();">
+                <label for = "add"></label>
+                <input type="number" name="number" id="add">
+                <label for="enter1">Enter</label>
+                <input type="submit" id = "enter1" value="000">
+            </form>
+        </div>
+        <div align="center" data-role="popup" id="myops" class="ui-content" style=" min-width:250px;">
+            <form method="post" action="calculations.php">
+                <h3>Choose Operation</h3>
+                <div class="top31">
+                    <input type="submit" value="Addition">
+                    <input type="submit" value="Subtraction">
+                    <input type="submit" value="Multiplication">
+                </div>
+                <div class="mid32">
+                    <input type="submit" value="Division">
+                    <input type="submit" value="A to Power B">
+                    <input type="submit" value="Ath root of B">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

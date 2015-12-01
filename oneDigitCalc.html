@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel = stylesheet href = animate.css>
+    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+    <div data-role="header">
+        <h1>Play with the Calculator!</h1>
+    </div>
+    <div data-role="main" ><!--they can have a ui-content class here-->
+        <div align="center" class = "mp1"><a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Enter a Number</a>
+        </div>
+        <br/>
+        <br/>
+        <div align="center" class = "mp2"><a href="#mysignup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Choose an  Operation</a>
+        </div>
+        <div align="center" data-role="popup" id="myPopup" class="ui-content" style=" min-width:250px;">
+            <div>
+                <form ><!--Go to calculating Php file-->
+                    <h3>Enter a digit!</h3>
+                    <h6>Only positive number.</h6>
+                    <div class="top3">
+                        <input type="submit" value="1">
+                        <input type="submit" value="4">
+                        <input type="submit" value="7">
+                    </div>
+                    <div class="mid3">
+                        <input type="submit" value="2">
+                        <input type="submit" value="5">
+                        <input type="submit" value="8">
+                    </div>
+                    <div class="bot3">
+                        <input type="submit" value="3">
+                        <input type="submit" value="6">
+                        <input type="submit" value="9">
+                    </div>
+                    <input type="submit" value="0"/>
+                    <input type="text" name="number"/>
+                    <input type="submit" value="Enter"/>
+                </form>
+            </div>
+        </div>
+        <div align="center" data-role="popup" id="mysignup" class="ui-content" style=" min-width:250px;">
+            <form>
+                <div>
+                    <h3>Choose Operation</h3>
+                    <div class="top31">
+                        <input type="submit" value="Root">
+                        <input type="submit" value="Log at base 2">
+                        <input type="submit" value="Log at base 10">
+                    </div>
+                    <div class="mid32">
+                        <input type="submit" value="Exponential">
+                        <input type="submit" value="Area of Circle">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

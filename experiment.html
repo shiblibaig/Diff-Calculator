@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exp</title>
+    <script>
+        var i=1;
+        var s=0;
+        function load1(){
+            var a1 = document.getElementById("q1").value;
+            var s=10*Number(a1)+ i*Number(a1);
+            document.getElementById("j").value =s;
+            i++;
+            return s;
+        }
+        function load2(){
+            var a2 = document.getElementById("q2").value;
+            var s=10*Number(a2)+ i*Number(a2);
+            document.getElementById("q2").value=s;
+            i++;
+            return s;
+        }
+        function change(){
+            var c = document.getElementById("a").value;
+            if(c=="Enter"){
+                document.getElementById("a").value = "Neter";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <input id = "a" type = "button" value="Enter" onclick="change()"/>
+    <input id= "q1" type="button" value = "6" onclick="load1()"/>
+    <input id= "q2" type="button" value = "7" onclick="load2()"/>
+    <input id = "j" type="text"/>
+</form>
+<div><p id = "k"></p></div>
+</body>
+</html>
